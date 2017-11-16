@@ -9,28 +9,15 @@
 import UIKit
 
 @IBDesignable class TicTacToeView: UIView {
-
+    
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
     
-    subscript(x: Int, y: Int) -> Character {
-        get {
-            return "X"
-        }
-        set {
-            
-        }
-    }
-
-    
-//    let ticTacToe = TicTacToe()
-//    ticTacToe[0][0]
-
     override func draw(_ rect: CGRect) {
         
         let bezier = UIBezierPath()
@@ -45,17 +32,54 @@ import UIKit
         bezier.move(to:CGPoint(x:size.width*2/3,y:30.0))
         bezier.addLine(to: CGPoint(x:size.width*2/3, y:size.height-30))
         
-        UIColor.black.setStroke()
-        bezier.lineWidth = 5
-        
-        bezier.stroke()
-        
-        if true {
-            bezier.move(to:CGPoint(x:30.0,y:30.0))
-            bezier.addLine(to: CGPoint(x:(size.width-30), y:size.height/3))
+        for draw in data{
+            
+            var wdth:CGFloat = 1
+            var hght:CGFloat = 1
+            
+            let char1:String.Index = draw.index(draw.startIndex, offsetBy: 0)
+            let char2:String.Index = draw.index(draw.startIndex, offsetBy: 1)
+            let char3:String.Index = draw.index(draw.startIndex, offsetBy: 2)
+            if(draw[char1] == "0"){
+                hght = 6
+            }
+            if draw[char1] == "1"{
+                hght = 2
+            }
+            if draw[char1] == "2"{
+                hght = 1.2
+            }
+            if draw[char2] == "0"{
+                wdth = 6
+            }
+            if draw[char2] == "1"{
+                wdth = 2
+            }
+            if draw[char2] == "2"{
+                wdth = 1.2
+            }
+            if draw[char3] == "x" || draw[char3] == "X" {
+                bezier.move(to: CGPoint(x:size.width/(wdth) - size.width/10.0, y:size.height/(hght) - size.height/10.0))
+                bezier.addLine(to: CGPoint(x:size.width/(wdth) + size.width/10.0, y:size.height/(hght) + size.height/10.0))
+                bezier.move(to: CGPoint(x:size.width/(wdth) + size.width/10.0, y:size.height/(hght) - size.height/10.0))
+                bezier.addLine(to: CGPoint(x:size.width/(wdth) - size.width/10.0, y:size.height/(hght) + size.height/10.0))
+                
+            }
+            if draw[char3] == "o" || draw[char3] == "O" {
+                bezier.move(to:CGPoint(x:(size.width/wdth)+size.width/10.0,y:size.height/hght))
+                
+                bezier.addArc(withCenter: CGPoint(x:size.width/wdth,y:size.height/hght), radius: size.width/10.0, startAngle: 0.0, endAngle: 2 * .pi , clockwise: true)
+            }
+            
+            
+            
+            UIColor.black.setStroke()
+            bezier.lineWidth = 5
+            
+            bezier.stroke()
+            
+            
         }
         
-        
     }
-
 }

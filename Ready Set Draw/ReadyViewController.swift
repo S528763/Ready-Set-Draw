@@ -8,34 +8,29 @@
 
 import UIKit
 
+var data:[String] = []
+
 class ReadyViewController: UIViewController {
     
-    let ticTacToe = TicTacToeView()
-
-    @IBOutlet weak var num1:UILabel!
-    @IBOutlet weak var num2:UILabel!
-    @IBOutlet weak var num3:UILabel!
-    @IBOutlet weak var num4:UILabel!
-    @IBOutlet weak var num5:UILabel!
-    @IBOutlet weak var num6:UILabel!
-    @IBOutlet weak var num7:UILabel!
-    @IBOutlet weak var num8:UILabel!
-    @IBOutlet weak var num9:UILabel!
-    
     @IBOutlet weak var dataTF:UITextField!
-    @IBAction func go(_ sender:Any) {
-        for i in dataTF.text!.components(separatedBy: " ") {
-            for j in 0 ... i.count-1 {
-                
-            }
-        }
+    
+    @IBOutlet weak var ticTacToe: TicTacToeView!
+    
+    @IBAction func go(_ sender: Any) {
+        data = splitData(series: dataTF.text!)
+        ticTacToe.setNeedsDisplay()
     }
     
+    func splitData(series:String) -> [String] {
+        var ticTacToeData:[String] = []
+        for str in series.components(separatedBy: " "){
+            ticTacToeData.append(str)
+        }
+        return ticTacToeData
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tictactoe = TicTacToeView()
      //   num1.text = tictactoe[0][0]
        // tictactoe[0][0] = "X"
         // Do any additional setup after loading the view, typically from a nib.

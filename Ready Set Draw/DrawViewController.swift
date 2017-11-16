@@ -8,7 +8,29 @@
 
 import UIKit
 
+var num = 0
 class DrawViewController: UIViewController {
+    
+    @IBOutlet weak var numOfRectangles: UITextField!
+    @IBOutlet weak var mondrian: MondrianView!
+    
+    @IBAction func drawRectangles(_ sender: Any) {
+        if Int(numOfRectangles.text!) == nil {
+            let alert = UIAlertController(title: "Oops!",
+                                          message: "Please enter a valid number",
+                                          preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+            alert.addAction(cancel)
+            if Int(numOfRectangles.text!) == nil{
+                present(alert, animated: true, completion: nil)
+            }
+        }
+        else {
+            num = Int(numOfRectangles.text!)!
+            mondrian.setNeedsDisplay()
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
