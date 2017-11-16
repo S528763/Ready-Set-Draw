@@ -8,7 +8,9 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ReadyViewController: UIViewController {
+    
+    let ticTacToe = TicTacToeView()
 
     @IBOutlet weak var num1:UILabel!
     @IBOutlet weak var num2:UILabel!
@@ -20,10 +22,21 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var num8:UILabel!
     @IBOutlet weak var num9:UILabel!
     
+    @IBOutlet weak var dataTF:UITextField!
+    @IBAction func go(_ sender:Any) {
+        for i in dataTF.text!.components(separatedBy: " ") {
+            for j in 0 ... i.count-1 {
+                
+            }
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tictactoe = TicTacToeView()
+     //   num1.text = tictactoe[0][0]
        // tictactoe[0][0] = "X"
         // Do any additional setup after loading the view, typically from a nib.
     }

@@ -18,9 +18,19 @@ import UIKit
     }
     */
     
+    subscript(x: Int, y: Int) -> Character {
+        get {
+            return "X"
+        }
+        set {
+            
+        }
+    }
 
     
-    
+//    let ticTacToe = TicTacToe()
+//    ticTacToe[0][0]
+
     override func draw(_ rect: CGRect) {
         
         let bezier = UIBezierPath()
@@ -40,22 +50,12 @@ import UIKit
         
         bezier.stroke()
         
+        if true {
+            bezier.move(to:CGPoint(x:30.0,y:30.0))
+            bezier.addLine(to: CGPoint(x:(size.width-30), y:size.height/3))
+        }
         
-//        var aPath = UIBezierPath()
-//        
-//        aPath.moveToPoint(CGPoint(x:size.width, y:size.height))
-//        
-//        aPath.addLineToPoint(CGPoint(x:/*Put Next Location*/, y:/*Put Next Location*/))
-//        
-//        //Keep using the method addLineToPoint until you get to the one where about to close the path
-//        
-//        aPath.closePath()
-//        
-//        //If you want to stroke it with a red color
-//        UIColor.redColor().set()
-//        aPath.stroke()
-//        //If you want to fill it as well
-//        aPath.fill()
+        
     }
 
 }

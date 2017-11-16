@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F05106A1FBD1355007BA04C /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0510691FBD1355007BA04C /* ClockView.swift */; };
+		1F05106C1FBD333B007BA04C /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05106B1FBD333B007BA04C /* DrawViewController.swift */; };
 		1FA758BF1FBBFA2000AB1C7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA758BE1FBBFA2000AB1C7C /* AppDelegate.swift */; };
-		1FA758C11FBBFA2000AB1C7C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA758C01FBBFA2000AB1C7C /* FirstViewController.swift */; };
-		1FA758C31FBBFA2000AB1C7C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA758C21FBBFA2000AB1C7C /* SecondViewController.swift */; };
+		1FA758C11FBBFA2000AB1C7C /* ReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA758C01FBBFA2000AB1C7C /* ReadyViewController.swift */; };
+		1FA758C31FBBFA2000AB1C7C /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA758C21FBBFA2000AB1C7C /* SetViewController.swift */; };
 		1FA758C61FBBFA2000AB1C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA758C41FBBFA2000AB1C7C /* Main.storyboard */; };
 		1FA758C81FBBFA2000AB1C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA758C71FBBFA2000AB1C7C /* Assets.xcassets */; };
 		1FA758CB1FBBFA2000AB1C7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA758C91FBBFA2000AB1C7C /* LaunchScreen.storyboard */; };
@@ -17,10 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0510691FBD1355007BA04C /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		1F05106B1FBD333B007BA04C /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		1FA758BB1FBBFA2000AB1C7C /* Ready Set Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ready Set Draw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA758BE1FBBFA2000AB1C7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FA758C01FBBFA2000AB1C7C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1FA758C21FBBFA2000AB1C7C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1FA758C01FBBFA2000AB1C7C /* ReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyViewController.swift; sourceTree = "<group>"; };
+		1FA758C21FBBFA2000AB1C7C /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		1FA758C51FBBFA2000AB1C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FA758C71FBBFA2000AB1C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FA758CA1FBBFA2000AB1C7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,10 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				1FA758BE1FBBFA2000AB1C7C /* AppDelegate.swift */,
-				1FA758C01FBBFA2000AB1C7C /* FirstViewController.swift */,
-				1FA758C21FBBFA2000AB1C7C /* SecondViewController.swift */,
-				1FA758C41FBBFA2000AB1C7C /* Main.storyboard */,
+				1FA758C01FBBFA2000AB1C7C /* ReadyViewController.swift */,
+				1FA758C21FBBFA2000AB1C7C /* SetViewController.swift */,
 				1FA758D21FBBFAF900AB1C7C /* TicTacToeView.swift */,
+				1F0510691FBD1355007BA04C /* ClockView.swift */,
+				1F05106B1FBD333B007BA04C /* DrawViewController.swift */,
+				1FA758C41FBBFA2000AB1C7C /* Main.storyboard */,
 				1FA758C71FBBFA2000AB1C7C /* Assets.xcassets */,
 				1FA758C91FBBFA2000AB1C7C /* LaunchScreen.storyboard */,
 				1FA758CC1FBBFA2000AB1C7C /* Info.plist */,
@@ -142,10 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA758C31FBBFA2000AB1C7C /* SecondViewController.swift in Sources */,
+				1F05106C1FBD333B007BA04C /* DrawViewController.swift in Sources */,
+				1FA758C31FBBFA2000AB1C7C /* SetViewController.swift in Sources */,
+				1F05106A1FBD1355007BA04C /* ClockView.swift in Sources */,
 				1FA758D31FBBFAF900AB1C7C /* TicTacToeView.swift in Sources */,
 				1FA758BF1FBBFA2000AB1C7C /* AppDelegate.swift in Sources */,
-				1FA758C11FBBFA2000AB1C7C /* FirstViewController.swift in Sources */,
+				1FA758C11FBBFA2000AB1C7C /* ReadyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
